@@ -1602,15 +1602,15 @@ if test "x$conf_sasl" = "xyes"; then
 			 have_gsasl=no),
 		have_gsasl=no)
 
-	if test "x$have_gsasl" = "xyes"; then
+	#if test "x$have_gsasl" = "xyes"; then
 		AM_CONDITIONAL(VMIME_HAVE_SASL_SUPPORT, true)
 		VMIME_HAVE_SASL_SUPPORT=1
 
 		GSASL_REQUIRED=${GSASL_AVAIL_REQUIRED}
 		GSASL_LIBS=${GSASL_AVAIL_LIBS}
-	else
-		AC_MSG_ERROR(can't find an usable version of GNU SASL library)
-	fi
+	#else
+		#AC_MSG_ERROR(can't find an usable version of GNU SASL library)
+	#fi
 else
 	AM_CONDITIONAL(VMIME_HAVE_SASL_SUPPORT, false)
 	VMIME_HAVE_SASL_SUPPORT=0
